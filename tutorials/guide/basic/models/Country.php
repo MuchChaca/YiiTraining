@@ -5,7 +5,8 @@
 
  // No need to write anything inside Country class
  // Yii guess the table name associated
- class Country extends ActiveRecord{}
+ class Country extends ActiveRecord{
+ }
 
 
 // get all rows from the country table and order them by "name"
