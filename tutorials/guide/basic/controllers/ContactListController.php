@@ -3,7 +3,7 @@ namespace app\controllers;
 
 use yii\web\Controller;
 use yii\data\Pagination;
-use yii\models\ContactList;
+use app\models\ContactList;
 
 class ContactListController extends Controller{
 	public function actionIndex(){
@@ -14,14 +14,14 @@ class ContactListController extends Controller{
 			'totalCount' => $query->count(),
 		]);
 
-		$contacts = $query->orderBy('name')
+		$contacts = $query->orderBy('nom')
 			->offset($pagination->offset)
 			->limit($pagination->limit)
 			->all();
 
-		return $this->render([
+		return $this->render('index', [
 			'pagination' => $pagination,
-			'contacts' => $contact,
+			'contacts' => $contacts,
 		]);
 	}
 }

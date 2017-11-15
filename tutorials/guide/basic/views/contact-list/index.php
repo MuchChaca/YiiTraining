@@ -7,7 +7,7 @@ use yii\widgets\LinkPager;
 <ul>
 	<?php foreach($contacts as $contact): ?>
 		<li>
-			<?= Html::encode("{$contact->nom} {$contact->prenom} ") ?>
+			<strong><?= Html::encode("{$contact->nom} {$contact->prenom} ") ?></strong><br>
 			<strong>Email: </strong><?= Html::encode("{$contact->email}") ?><br>
 			<strong>Portable: </strong><?= Html::encode("{$contact->portable}") ?><br>
 			<strong>Fixe: </strong><?= Html::encode("{$contact->fixe}") ?>
