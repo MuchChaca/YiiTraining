@@ -16,7 +16,7 @@ class CountryController extends Controller{
 			'defaultPageSize' => 5,
 			'totalCount' => $query->count(),  // $query->count() counts the number of rows returned by the query $query
 		]);
-
+			// keep this ?
 		$countries = $query->orderBy('name')
 			->offset($pagination->offset)
 			->limit($pagination->limit)
